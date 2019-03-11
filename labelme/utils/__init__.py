@@ -10,6 +10,7 @@ from .shape import masks_to_bboxes
 from .shape import polygons_to_mask
 from .shape import shape_to_mask
 from .shape import shapes_to_label
+from .shape import shapes_to_multi_ch_label
 
 from .draw import draw_instances
 from .draw import draw_label

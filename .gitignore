@@ -8,3 +8,6 @@
 *.py[cdo]
 
 .DS_Store
+*.pyproj
+*.sln
+labelme/.vs/labelme/v14/.suo
