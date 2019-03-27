@@ -115,12 +115,11 @@ def shapes_to_multi_ch_label(img_shape, shapes, label_name_to_value, class_num=1
     cls = np.zeros(img_shape[:2], dtype=np.uint8)
     cls = np.expand_dims(cls, axis=2)
     cls = np.repeat(cls,repeats=class_num, axis=2)
-    
     for shape in shapes:
         points = shape['points']
         cls_name = shape['label']
         cls_id = label_name_to_value[cls_name] -1
         shape_type = shape.get('shape_type', None)
         mask = shape_to_mask(img_shape[:2], points, shape_type)
-        cls[:,:,cls_id] = mask
+        cls[:,:,cls_id] = np.bitwise_or(cls[:,:,cls_id], mask)
     return cls
