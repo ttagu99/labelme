@@ -8,6 +8,10 @@
 *.py[cdo]
 
 .DS_Store
+<<<<<<< HEAD
 *.pyproj
 *.sln
 labelme/.vs/labelme/v14/.suo
+=======
+.idea/
+>>>>>>> wkentaro/main
