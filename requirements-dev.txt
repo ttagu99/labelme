@@ -4,3 +4,4 @@ hacking==4.1.0
 pytest
 pytest-qt
 twine
+requests>=2.32.4 # not directly required, pinned by Snyk to avoid a vulnerability
